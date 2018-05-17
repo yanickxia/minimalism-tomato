@@ -1,0 +1,33 @@
+<!--pages/setting/setting.wxml-->
+
+<view class="weui-panel weui-panel_access">
+  <view class="weui-panel__hd">系统配置</view>
+  <view class="weui-panel__bd">
+    <view class="weui-media-box weui-media-box_text">
+      <view class="weui-media-box__title weui-media-box__title_in-text">番茄时长</view>
+      <view class="weui-media-box__desc">
+        <slider min='5' max='60' show-value bindchange='tomatoUnitChange' value="{{tomatoUnit}}" />
+      </view>
+    </view>
+    <view class="weui-media-box weui-media-box_text">
+      <view class="weui-media-box__title weui-media-box__title_in-text">休息时长</view>
+      <view class="weui-media-box__desc">
+        <slider min='1' max='40' show-value bindchange='restTimeUnitChange' value="{{restTimeUnit}}" />
+      </view>
+    </view>
+
+    <view class="weui-media-box weui-media-box_text">
+      <view class="weui-media-box__title weui-media-box__title_in-text">自动休息</view>
+      <view class="weui-media-box__desc">
+        <switch bindchange="autoRestSwitch" checked="{{autoRestEnable}}" />
+      </view>
+    </view>
+
+    <view class="weui-media-box weui-media-box_text">
+      <view class="weui-media-box__title weui-media-box__title_in-text">每日目标(番茄数)</view>
+      <view class="weui-media-box__desc">
+        <slider min='1' max='20' show-value bindchange='tomatoGoalChange' value="{{tomatoGoal}}" />
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,32 @@
+/**index.wxss**/
+
+.todo-item {
+  margin-top: 10rpx;
+  text-align: center;
+  background-color: #ebebeb;
+  height: 100rpx;
+  line-height: 2.3em;
+  font-size: 50rpx;
+}
+
+.begin-btn {
+  clear: both;
+  display: block;
+  text-align: center;
+  margin: 0px auto;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+
+.remaining-time {
+  position: absolute;
+  width: 400rpx;
+  height: 400rpx;
+  top: 50%;
+  left: 50%;
+  margin-top: -200rpx;
+  margin-left: -240rpx;
+  text-align: center;
+  font-size: 200rpx;
+}
