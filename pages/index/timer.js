@@ -1,12 +1,10 @@
 const app = getApp()
 const utils = require('./utils');
 const TimerStatus = utils.TimerStatus;
-const debug = true;
 
 function checkTimerStatus(a, b) {
   return a.id == b.id;
 };
-
 
 function setTimerStatus(page, newTimerStatus) {
   page.setData({
@@ -84,7 +82,7 @@ function doneTomato(page) {
     task: page.data.todo
   };
 
-  if(!app.globalData.autoRestEnable){
+  if (!app.globalData.autoRestEnable) {
     utils.showFinish(thisFinshTask);
   }
   setTimerStatus(page, newTimerStatus);
@@ -92,7 +90,7 @@ function doneTomato(page) {
     remainingTimeText: utils.parseTimeToStr(getRestTime())
   });
 
-  if(app.globalData.autoRestEnable){
+  if (app.globalData.autoRestEnable) {
     wx.showToast({
       title: '完成一个番茄',
       icon: 'none',
@@ -115,15 +113,15 @@ function doneRest(page) {
 }
 
 function getRestTime() {
-  if(debug){
-      return 2;
+  if (app.globalData.debug) {
+    return 2;
   }
   return app.globalData.restTimeUnit * 60;
 };
 
 function getTomatoTime() {
-  if(debug){
-      return 3;
+  if (app.globalData.debug) {
+    return 3;
   }
   return app.globalData.tomatoUnit * 60;
 }
@@ -135,6 +133,6 @@ module.exports = {
   breakRunning: breakRunning,
   toResting: toResting,
   restToInit: restToInit,
-  doneTomato:doneTomato,
+  doneTomato: doneTomato,
   doneRest: doneRest
 };

@@ -69,7 +69,7 @@ Page({
     if (newRemainingTime <= 0) {
       clearInterval(this.data.intervalEvent);
       timer.doneTomato(this);
-      if(app.globalData.autoRestEnable){
+      if (app.globalData.autoRestEnable) {
         this.data.intervalEvent = setInterval(this.refreshRemainingRestTime, 1000);
       }
     } else {

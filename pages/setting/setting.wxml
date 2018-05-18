@@ -30,4 +30,12 @@
       </view>
     </view>
   </view>
+
+</view>
+
+<view  bindlongtap="devBindTap"  class="weui-footer weui-footer_fixed-bottom">
+  <view class="weui-footer__links">
+    <navigator url="" class="weui-footer__link">滴答时光</navigator>
+  </view>
+  <view class="weui-footer__text">Copyright © 2017-2018 盛夏时光机</view>
 </view>

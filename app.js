@@ -9,8 +9,9 @@ App({
         restTimeUnit: 5,
         autoRestEnable: false,
         tomatoGoal: 5,
+        debug: false,
         tomatoHistory: [
-  
+
         ]
       };
     } else {
