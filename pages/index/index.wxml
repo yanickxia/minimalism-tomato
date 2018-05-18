@@ -4,7 +4,7 @@
 
   <view class="weui-flex">
     <view class="weui-flex__item">
-      <input class="todo-item" type='text' disabled="{{todoIputDisabled}}" bindinput="bindKeyInput" maxlength="-1" placeholder="伟大的事情从此开始" />
+      <input class="todo-item" type='text' disabled="{{timerStatus.id != 1}}" bindinput="bindKeyInput" maxlength="-1" placeholder="伟大的事情从此开始" />
 
     </view>
   </view>
@@ -18,7 +18,7 @@
 
   <view>
     <view class="begin-btn">
-      <button class="weui-btn" bindtap='{{bindBeginTap}}' disabled='{{beginBtnDisabled}}' type="primary">{{beginBtnText}}</button>
+      <button class="weui-btn" bindtap='beginTap' disabled='{{beginBtnDisabled}}' type="{{beginBtnClass}}">{{beginBtnText}}</button>
     </view>
   </view>
 </view>
